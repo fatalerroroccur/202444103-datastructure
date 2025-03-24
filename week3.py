@@ -26,9 +26,9 @@ print(group_rating)
 
 def inters(l3,l4):
     l5 = []
-        s1 = set(l3)
-        s2 = set(l4)
-        return list(s1.union(s2))
-    l3 = [45,5,22,31,7,19]
-    l4 = [22,1,5,2,27,27,19,23,13,41]
-    print(inters(l3,l4))
+    s1 = set(l3)
+    s2 = set(l4)
+    return list(s1.union(s2))
+l3 = [45,5,22,31,7,19]
+l4 = [22,1,5,2,27,27,19,23,13,41]
+print(inters(l3,l4))
