@@ -1,7 +1,15 @@
 l = [99,8,-7,8,16]
 for i in range(len(l)):
     print(f"{l[i]:3} {id(l[i])}")
-
+def my_zip(l1,l2):
+    l3 = list()
+    if len(l1)>len(l2):
+        for i in range(len(l2)):
+            l3.append((l1[i], l2[i]))
+    else:
+        for i in range(len(l1)):
+            l3.append((l1[i], l2[i]))
+    return l3
 groups = ['hot','seventeen','blackpink','njz']
 ratings = [1,2,3,4]
 group_rating = dict(list(zip(groups,ratings)))
