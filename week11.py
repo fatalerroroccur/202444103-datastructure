@@ -57,12 +57,19 @@ def dfs(g,i,visited):
     for j in range(len(graph)):
         if g[i][j] == 1 and not visited[j]:
             dfs(g,j,visited)
+            visited[j]=1
 def bfs(g,i,visited):
-    pass
-
+    visited[i] = True
+    print(chr(ord('A') + 1), end=' ')
+    for j in range(len(graph)):
+        if g[i][j] == 1 and not visited[j]:
+            dfs(g, j, visited)
+            visited[j] = 1
+visited_bfs = [False for _ in range(len(graph))]
 visited_dfs = [False for _ in range(len(graph))]
-dfs(graph,3,visited_dfs)
+dfs(graph,7,visited_dfs)
 print()
-#bfs(graph,)
+bfs(graph,4,visited_bfs)
+print()
 
 
